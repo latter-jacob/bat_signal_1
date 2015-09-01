@@ -50,4 +50,5 @@ post '/batsignal' do
     to: '5183399563',
     body: 'To the BatMobile.'
   )
+  redirect "/batsignal"
 end
