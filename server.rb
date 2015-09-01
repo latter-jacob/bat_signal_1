@@ -28,6 +28,10 @@ def db_connection
 end
 
 
-# get "/batsignal" do
-#   erb :index
-# end
+get "/" do
+  redirect '/batsignal'
+end
+
+get "/batsignal" do
+  erb :index
+end
