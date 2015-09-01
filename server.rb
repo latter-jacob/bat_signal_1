@@ -1,6 +1,6 @@
 require 'sinatra'
 require 'pg'
-require 'dotenv'
+require 'dotenv-rails'
 require 'twilio-ruby'
 
 Dotenv.load
