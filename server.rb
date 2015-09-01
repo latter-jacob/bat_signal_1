@@ -39,16 +39,15 @@ get "/batsignal" do
   erb :index
 end
 
-Twilio.configure do |config|
-# put your own credentials here
-  config.account_sid = 'TWILIO_ACCOUNT_SID'
-  config.auth_token = 'TWILIO_AUTH_TOKEN'
-end
-# set up a client to talk to the Twilio REST API
-@client = Twilio::REST::Client.new account_sid, auth_token
-
-@client.account.messages.create({
-    :from => '+15183175026',
-    :to => '+15183399563',
-    :body => 'To The Batmobile!',
-})
+# Twilio.configure do |config|
+#   config.account_sid = 'TWILIO_ACCOUNT_SID'
+#   config.auth_token = 'TWILIO_AUTH_TOKEN'
+# end
+# # set up a client to talk to the Twilio REST API
+# @client = Twilio::REST::Client.new account_sid, auth_token
+#
+# @client.account.messages.create({
+#     :from => '+15183175026',
+#     :to => '+15183399563',
+#     :body => 'To The Batmobile!',
+# })
