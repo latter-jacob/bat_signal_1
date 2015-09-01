@@ -3,10 +3,9 @@ require 'sinatra'
 require "pg"
 require 'rubygems' # not necessary with ruby 1.9 but included for completeness
 require 'twilio-ruby'
-require 'dotenv'
-
 
 configure :development do
+  require 'dotenv'
   set :db_config, { dbname: "bat_signal" }
 end
 
