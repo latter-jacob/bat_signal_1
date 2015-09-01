@@ -1,4 +1,4 @@
-gem 'dotenv-rails', :groups => [:development, :test]
+gem 'dotenv-rails'#, :groups => [:development, :test]
 gem 'twilio-ruby'
 source "http://rubygems.org"
 
