@@ -1,6 +1,5 @@
-require "pry"
+require "puma"
 require 'sinatra'
-require 'tropo-webapi-ruby'
 require "pg"
 
 
@@ -28,12 +27,7 @@ def db_connection
   end
 end
 
-# get "/" do
-#  redirect "/batsignal"
-# end
-#
-#
-#
+
 # get "/batsignal" do
 #   erb :index
 # end
