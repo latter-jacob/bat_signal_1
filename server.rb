@@ -25,6 +25,8 @@ configure :production do
   }
 end
 
+client = Twilio::REST::Client.new
+
 def db_connection
   begin
     connection = PG.connect(settings.db_config)
@@ -43,5 +45,9 @@ get "/batsignal" do
 end
 
 post '/batsignal' do
-
+  client.messages.create(
+    from: '5183175026',
+    to: '5183399563',
+    body: 'To the BatMobile.'
+  )
 end
