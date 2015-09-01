@@ -1,3 +1,5 @@
+gem 'dotenv-rails', :groups => [:development, :test]
+gem 'twilio-ruby'
 source "http://rubygems.org"
 
 ruby "2.1.5"
