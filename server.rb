@@ -30,8 +30,10 @@ get "/" do
  redirect "/batsignal"
 end
 
-
-
 get "/batsignal" do
   erb :index
+end
+
+post '/batsignal' do
+
 end
