@@ -2,7 +2,7 @@ require 'sinatra'
 require 'pg'
 require 'dotenv'
 require 'twilio-ruby'
-require 'pry'
+
 Dotenv.load
 
 Twilio.configure do |config|
@@ -47,19 +47,6 @@ end
 get "/batsignal/batform" do
   erb :form
 end
-
-# def server_phone_list
-#   list = []
-#   list << db_connection {|conn| conn.exec_params ("Select members.phonenumber from members")}
-#     list.each do |number|
-#       num = number.values.flatten
-#     end
-#     num.each do |x|
-#       each_number = x
-#         # binding.pry
-#     end
-#     each_number
-# end
 
 post '/batsignal' do
   client.messages.create(
