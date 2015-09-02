@@ -11,3 +11,22 @@
   color: white;
   text-size: 20px;
 }
+
+body {
+  background-color: black;
+}
+
+h1 {
+  color: yellow;
+  margin-left: 275px;
+}
+
+form {
+  color: yellow;
+  margin-left: 200px;
+}
+
+.pic {
+  margin-left: 100px;
+  margin-top: 25px;
+}
