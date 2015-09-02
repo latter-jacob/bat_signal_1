@@ -10,14 +10,14 @@ SET check_function_bodies = false;
 SET client_min_messages = warning;
 
 --
--- Name: plpgsql; Type: EXTENSION; Schema: -; Owner: 
+-- Name: plpgsql; Type: EXTENSION; Schema: -; Owner:
 --
 
 CREATE EXTENSION IF NOT EXISTS plpgsql WITH SCHEMA pg_catalog;
 
 
 --
--- Name: EXTENSION plpgsql; Type: COMMENT; Schema: -; Owner: 
+-- Name: EXTENSION plpgsql; Type: COMMENT; Schema: -; Owner:
 --
 
 COMMENT ON EXTENSION plpgsql IS 'PL/pgSQL procedural language';
@@ -30,11 +30,11 @@ SET default_tablespace = '';
 SET default_with_oids = false;
 
 --
--- Name: members; Type: TABLE; Schema: public; Owner: jacoblatter; Tablespace: 
+-- Name: members; Type: TABLE; Schema: public; Owner: jacoblatter; Tablespace:
 --
 
 CREATE TABLE members (
-    id integer NOT NULL,
+    id SERIAL PRIMARY KEY,
     phonenumber bigint NOT NULL,
     name character varying(255)
 );
@@ -71,19 +71,19 @@ ALTER TABLE ONLY members ALTER COLUMN id SET DEFAULT nextval('members_id_seq'::r
 
 
 --
--- Name: members_phonenumber_key; Type: CONSTRAINT; Schema: public; Owner: jacoblatter; Tablespace: 
+-- Name: members_phonenumber_key; Type: CONSTRAINT; Schema: public; Owner: jacoblatter; Tablespace:
 --
 
-ALTER TABLE ONLY members
-    ADD CONSTRAINT members_phonenumber_key UNIQUE (phonenumber);
+-- ALTER TABLE ONLY members
+--     ADD CONSTRAINT members_phonenumber_key UNIQUE (phonenumber);
 
 
 --
--- Name: members_pkey; Type: CONSTRAINT; Schema: public; Owner: jacoblatter; Tablespace: 
+-- Name: members_pkey; Type: CONSTRAINT; Schema: public; Owner: jacoblatter; Tablespace:
 --
 
-ALTER TABLE ONLY members
-    ADD CONSTRAINT members_pkey PRIMARY KEY (id);
+-- ALTER TABLE ONLY members
+--     ADD CONSTRAINT members_pkey PRIMARY KEY (id);
 
 
 --
@@ -99,4 +99,3 @@ GRANT ALL ON SCHEMA public TO PUBLIC;
 --
 -- PostgreSQL database dump complete
 --
-
