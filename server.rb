@@ -54,14 +54,17 @@ end
 #     list.each do |number|
 #       num = number.values.flatten
 #     end
+#     num.each do |x|
+#       each_number = x
+#         # binding.pry
+#     end
+#     each_number
 # end
 
-
 post '/batsignal' do
-
   client.messages.create(
     from: '5183175026',
-    to: '5183399563', '2029997303', '5083179244',
+    to: '5183399563',
     body: 'To the BatMobile.'
   )
   redirect "/batsignal"
