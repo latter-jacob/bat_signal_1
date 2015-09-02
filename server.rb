@@ -44,6 +44,10 @@ get "/batsignal" do
   erb :index
 end
 
+get "/batsignal/batform" do
+  erb :form
+end
+
 post '/batsignal' do
   client.messages.create(
     from: '5183175026',
@@ -51,4 +55,8 @@ post '/batsignal' do
     body: 'To the BatMobile.'
   )
   redirect "/batsignal"
+end
+
+post '/batsignal' do
+  redirect '/batsignal/batform'
 end
