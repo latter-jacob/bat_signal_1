@@ -51,12 +51,8 @@ end
 post '/batsignal' do
   client.messages.create(
     from: '5183175026',
-    to: '5183399563',
+    to: '7169233599',
     body: 'To the BatMobile.'
   )
   redirect "/batsignal"
-end
-
-post '/batsignal' do
-  redirect '/batsignal/batform'
 end
