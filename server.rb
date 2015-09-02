@@ -61,7 +61,7 @@ post '/batsignal' do
 
   client.messages.create(
     from: '5183175026',
-    to: '5183399563, 2029997303, 5083179244',
+    to: '5183399563', '2029997303', '5083179244',
     body: 'To the BatMobile.'
   )
   redirect "/batsignal"
