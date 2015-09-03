@@ -50,8 +50,8 @@ end
 
 post '/batsignal' do
   client.messages.create(
-    from: '5183175026',
-    to: '5183399563',
+    from: 'twilio number',
+    to: 'user number',
     body: 'To the BatMobile.'
   )
   redirect "/batsignal"
